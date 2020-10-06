@@ -1,3 +1,7 @@
 przy starcie kontenera trzeba podminic zmienne z index.html na prawdzie ze zmiennych srodowiskowych
 potem przy uzyciu minikuba trzeba sprawdzic czy po wystartowaniu poda zeczywiscie podmienia informacje o podzie
-NEXT: przed do tworzenia klastra EKS z loadbalancerem
+1: with nginx-ingress https://kops.sigs.k8s.io/getting_started/aws/ on minikube
+2: przejdz do tworzenia klastra EKS z loadbalancerem
+3: 1+2 loadbalacner + nginx-ingers + 2gi serwis
+
+https://kubernetes.io/docs/tasks/inject-data-application/environment-variable-expose-pod-information/
