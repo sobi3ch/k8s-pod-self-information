@@ -1,0 +1,3 @@
+przy starcie kontenera trzeba podminic zmienne z index.html na prawdzie ze zmiennych srodowiskowych
+potem przy uzyciu minikuba trzeba sprawdzic czy po wystartowaniu poda zeczywiscie podmienia informacje o podzie
+NEXT: przed do tworzenia klastra EKS z loadbalancerem
