@@ -1,6 +1,7 @@
 FROM nginx:1.19-alpine
 
-LABEL example='POD information'
+LABEL maintainer='Allunel <info@allunel.pl>'
 
-ADD web/index.html /usr/share/nginx/html/
+ADD web/ /allunel/
 
+CMD ["/allunel/init.sh"]
