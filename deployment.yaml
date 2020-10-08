@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: allunel-web
+  name: allunel
   labels:
-    app: nginx
+    app: allunel
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: allunel
   template:
     metadata:
       labels:
-        app: nginx
+        app: allunel
     spec:
       containers:
-      - name: nginx
+      - name: allunel
         image: allunel-pod
         imagePullPolicy: IfNotPresent
         ports:
@@ -24,14 +24,16 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: allunel-web
+  name: allunel
   labels:
-    run: allunel-web
+    app: allunel
 spec:
   type: NodePort
   ports:
-  - port: 80
+  - port: 81
+    targetPort: 80
     nodePort: 30080
     protocol: TCP
   selector:
-    run: allunel-web
+    run: allunel
+    component: allunel
