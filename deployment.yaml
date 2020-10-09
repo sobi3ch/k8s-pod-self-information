@@ -3,9 +3,9 @@ kind: Deployment
 metadata:
   name: allunel-web
   labels:
-    app: allunel
+    app: allunel-deployment
 spec: # deployment
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: allunel
@@ -17,7 +17,7 @@ spec: # deployment
       containers:
       - name: allunel
         image: allunel-pod
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Never
         ports:
         - containerPort: 80
         env:
@@ -53,6 +53,5 @@ spec:
   ports:
   - port: 80
     nodePort: 30080
-    protocol: TCP
   selector:
     app: allunel
